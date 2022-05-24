@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 660px;
+  margin: auto;
+  background: #000;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  flex: none;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  background: white;
+}
+
+li div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.front {
+  display: none;
+  border: 10px lightcoral solid;
+}
+
+.back {
+  background: red;
+}
+
+.is-turned .front {
+  display: block;
+}
+.is-turned .back {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*made by Maxime DESRUETS/*

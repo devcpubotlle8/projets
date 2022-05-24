@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>jeu de mémoire</title>
+
+    <section>
+      <div class="intro">
+        <p>
+          C'est un jeu pour 1 ou 2 joueurs . Il y a 12 cartes , Le premier
+          joueur clique sur deux cartes. Si les lettres sont identiques, il
+          gagne la paire de lettres constituée et rejoue. Si les lettres sont
+          différentes, les cartes se retournent faces cachées là où elles
+          étaient et c'est au deuxième joueur de jouer. La partie est terminée
+          lorsque toutes les cartes ont été assemblées par paires de lettres.
+        </p>
+      </div>
+    </section>
+  </head>
+  <body>
+    <ul>
+      <li data-letter="A">
+        <div class="front">A</div>
+        <div class="back"></div>
+      </li>
+      <li data-letter="A">
+        <div class="front">A</div>
+        <div class="back"></div>
+      </li>
+      <li data-letter="C">
+        <div class="front">C</div>
+        <div class="back"></div>
+      </li>
+      <li data-letter="B">
+        <div class="front">B</div>
+        <div class="back"></div>
+      </li>
+      <li data-letter="B">
+        <div class="front">B</div>
+        <div class="back"></div>
+      </li>
+      <li data-letter="F">
+        <div class="front">F</div>
+        <div class="back"></div>
+      </li>
+      <li data-letter="D">
+        <div class="front">D</div>
+        <div class="back"></div>
+      </li>
+      <li data-letter="E">
+        <div class="front">E</div>
+        <div class="back"></div>
+      </li>
+      <li data-letter="D">
+        <div class="front">D</div>
+        <div class="back"></div>
+      </li>
+      <li data-letter="E">
+        <div class="front">E</div>
+        <div class="back"></div>
+      </li>
+      <li data-letter="F">
+        <div class="front">F</div>
+        <div class="back"></div>
+      </li>
+      <li data-letter="C">
+        <div class="front">C</div>
+        <div class="back"></div>
+      </li>
+    </ul>
+
+    <script>
+      class Game {
+        $cards = document.querySelectorAll("li");
+        nextPlayer = null;
+
+        constructor(player1, player2) {
+          this.player1 = player1;
+          this.player2 = player2;
+          this.nextPlayer = player1;
+          // on setup les événements
+          const me = this;
+          this.$cards.forEach(function ($card) {
+            $card.addEventListener("click", function () {
+              me.chooseCard(this);
+            });
+          });
+        }
+
+        chooseCard($card) {
+          if (this.nextPlayer.lastMove) {
+            const lastLetter = this.nextPlayer.lastMove.dataset.letter;
+
+            if (lastLetter === $card.dataset.letter) {
+              this.nextPlayer.score++;
+              $card.classList.add("is-turned");
+              this.nextPlayer.lastMove = null;
+            } else {
+              const me = this;
+              $card.classList.add("is-turned");
+              setTimeout(function () {
+                me.nextPlayer.lastMove.classList.remove("is-turned");
+                $card.classList.remove("is-turned");
+                me.nextPlayer.lastMove = null;
+
+                if (me.nextPlayer === me.player1) {
+                  me.nextPlayer = me.player2;
+                } else {
+                  me.nextPlayer = me.player1;
+                }
+              }, 1000);
+            }
+          } else {
+            this.nextPlayer.lastMove = $card;
+            $card.classList.add("is-turned");
+          }
+        }
+      }
+
+      class Player {
+        score = 0;
+        lastMove = null;
+
+        constructor(name) {
+          this.name = name;
+        }
+      }
+
+      let Maxime = new Player("Maxime");
+      let joueur = new Player("joueur");
+      let game = new Game(Maxime, joueur);
+    </script>
+  </body>
+</html>
