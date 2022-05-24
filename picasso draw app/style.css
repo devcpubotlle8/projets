@@ -1,0 +1,79 @@
+body {
+  background-color: grey;
+}
+
+canvas {
+  border: 1px solid black;
+  flex: 4;
+  margin-right: 400px;
+  background-color: white;
+}
+.liens button:hover {
+  box-shadow: 1px 1px;
+}
+a {
+  text-decoration: none;
+}
+#dessin {
+  display: flex;
+}
+#palette,
+#outils {
+  flex: 1;
+}
+
+#palette div,
+#outils div {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#outils div:hover {
+  box-shadow: 1px 1px;
+}
+#palette div:hover {
+  box-shadow: 1px 1px;
+}
+#header {
+  display: flex;
+  height: 10rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Menu déroulant 
+
+
+
+nav{
+    transform: translate(-1000px,0);
+    transition: all 0.5s ease;
+}
+
+#ch{
+    display:none ;
+}
+
+nav{
+    display: block;
+    position: absolute;
+    width: 400px;
+    color:#fff;
+}
+
+#lab{
+    width: 30px;
+    height: 30px; 
+    background:linear-gradient(#000 0%, #000 20%,transparent 21%, transparent 40%, #000 41%, #000 60%, transparent 61%, transparent 80%, #000 81%, #000 100%);
+    margin: 4px;
+    display:block;
+}
+#ch:checked+nav {
+ transform: translate(0px,0);
+ transition: all 0.5s ease;} */
+
+/*made by Maxime DESRUETS*/
