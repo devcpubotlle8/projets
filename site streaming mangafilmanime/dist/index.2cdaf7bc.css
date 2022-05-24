@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  height: 100vh;
+  background-color: #000;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+section div {
+  max-width: 18.75rem;
+  max-height: 18.75rem;
+  border: 2px solid #000;
+}
+
+section img {
+  max-width: 18.75rem;
+  max-height: 18.75rem;
+}
+
+/*# sourceMappingURL=index.2cdaf7bc.css.map */

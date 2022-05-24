@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Recherche de films ou d'animes</title>
+
+    <script defer src="./script.js "></script>
+  </head>
+  <body>
+    <header>
+      <figure>
+        <img src="./manganome_logo.png" alt="Logo de Manganime" />
+      </figure>
+      <h1><strong>Filmanganime</strong></h1>
+      <div>
+        <p id="count"></p>
+        <form id="form">
+          <label for="search">Rechercher film ou anime</label>
+          <input id="search" type="search" required />
+          <button>Rechercher</button>
+        </form>
+        <p class="menu-btn" src="./saison.png" alt="saison">Exemples</p>
+      </div>
+
+      <nav>
+        <div class="menu">
+          <a class="close" href="#">X</a>
+          <ul>
+            <li><a href="printemps.html" target="_blank">printemps</a></li>
+            <li><a href="été.html" target="_blank">été</a></li>
+            <li><a href="automne.html" target="_blank">automne</a></li>
+            <li><a href="hiver.html" target="_blank">hiver</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="phrase_intro">
+      <br />
+      <p>
+        CHOISISSEZ VOTRE "THEME" DE FILM OU D'ANIME <br />CLIQUER SUR L'UN DES
+        BOUTONS <br />(Bleu=Hiver ; Orange=Automne ; Jaune=Été ; Vert=Printemps)
+      </p>
+      <br />
+    </div>
+    <div class="Genre">
+      <button id="genre" class="genre1">Action</button>
+      <button id="genre" class="genre1">Documentary</button>
+      <button id="genre" class="genre1">Comedy</button>
+      <button id="genre" class="genre1">War</button>
+
+      <button id="genre" class="genre2">Drama</button>
+      <button id="genre" class="genre2">Horror</button>
+      <button id="genre" class="genre2">Fantasy</button>
+
+      <button id="genre" class="genre3">Adventure</button>
+      <button id="genre" class="genre3">Comedy</button>
+
+      <button id="genre" class="genre4">Mystery</button>
+      <button id="genre" class="genre4">Romance</button>
+      <button id="genre" class="genre4">Science-Fiction</button>
+    </div>
+    <section class="Movies"></section>
+
+    <div class="results" id="results"></div>
+
+    <article id="movie"></article>
+    <div class="phrase_intro">
+      <br />
+      <p>
+        CHOISISSEZ VOTRE "SAISON" DE FILM OU D'ANIME <br />
+        (Bleu=hiver ; Orange=automne ; Jaune=été ; Vert=printemps)
+      </p>
+      <br />
+      <figure>
+        <img class="menu-btn" src="./saison.png" alt="saison" />
+      </figure>
+    </div>
+
+    <section class="saison">
+      <div class="spring">
+        <figure>
+          <img src="./spring.png" alt="" />
+        </figure>
+      </div>
+      <div class="summer">
+        <figure>
+          <img src="./summer.png" alt="" />
+        </figure>
+      </div>
+
+      <div class="automn">
+        <figure>
+          <img src="./automn.png" alt="" />
+        </figure>
+      </div>
+      <div class="winter">
+        <figure>
+          <label for="search"> Année</label>
+          <img
+            src="./winter.png"
+            alt="winter symbole"
+            width="300.5rem"
+            height="300.5rem"
+          />
+        </figure>
+      </div>
+    </section>
+  </body>
+</html>
+<script src="./script_menu.js"></script>

@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header {
+  align-items: center;
+  margin: auto;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+
+  form {
+    display: flex;
+    justify-content: space-between;
+  }
+  img {
+    max-width: 6.25rem;
+    max-height: 3.125rem;
+  }
+  h1 {
+    color: white;
+  }
+  label {
+    color: white;
+  }
+  input {
+    border: none;
+    font-weight: 600;
+    text-decoration: underline;
+    background-color: black;
+    color: white;
+  }
+}
+.menu {
+  position: absolute;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100%;
+  padding: 60px 20px 20px;
+  transition: all 0.8s;
+  li {
+    list-style: none;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+
+  a {
+    display: block;
+    color: white;
+    border: 1px solid white;
+    background-color: black;
+    padding: 8px;
+  }
+}
+
+.menu-btn {
+  border: 2px solid white;
+  color: white;
+  background-color: black;
+}
+
+.menu.is-open {
+  right: 0;
+}
+
+a:link {
+  color: snow;
+  text-decoration: none;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+}
+
+.saison {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  div {
+    border: 2px solid black;
+    max-width: 18.75rem;
+    max-height: 18.75rem;
+  }
+  img {
+    max-width: 100%;
+    max-height: 18.75rem;
+  }
+}
+.phrase_intro {
+  background-color: black;
+  padding-right: 100px;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  align-self: flex-start;
+}
+
+.winter:hover {
+  display: inline-block;
+  padding-left: 75%;
+  padding-top: 100vh;
+  background-image: url("./winter_2.gif");
+  background-size: cover;
+  img {
+    width: 100%;
+  }
+}
+.summer:hover {
+  display: inline-block;
+  padding-left: 50%;
+  padding-top: 100vh;
+  background-image: url("./summer.gif");
+  background-size: cover;
+  img {
+    width: 100%;
+  }
+}
+.spring:hover {
+  display: inline-block;
+  padding-right: 55%;
+  padding-top: 100vh;
+  background-image: url("./spring.gif");
+  background-size: cover;
+  img {
+    width: 100%;
+  }
+}
+.automn:hover {
+  display: inline-block;
+  padding-left: 55%;
+  padding-top: 100vh;
+  background-image: url("./automn.gif");
+  background-size: cover;
+  img {
+    width: 100%;
+  }
+}
+
+#results {
+  position: absolute;
+  width: 100%;
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 100%;
+  background-color: blue;
+}
+.winter__page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 1000px;
+  height: 100vh;
+  border: 2px solid red;
+}

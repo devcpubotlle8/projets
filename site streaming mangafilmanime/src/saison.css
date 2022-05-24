@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(https://i.gifer.com/origin/58/58bcdf57d5cbae761e796df882903fbd.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section {
+  backdrop-filter: blur(15px);
+  display: flex;
+  max-width: 100%;
+  height: 65vh;
+  background-color: transparent;
+}
+section img {
+  width: 1000px;
+}
+section p {
+  color: black;
+  font-size: 20px;
+}
+.liste__saison {
+  max-width: 50%;
+}
+.liste__saison div {
+  align-content: center;
+  display: flex;
+}
+.liste__saison h2 {
+  font-size: 40px;
+  color: white;
+}
+.liste__saison button {
+  margin: auto;
+}
+.liste__saison__lecture {
+  width: 9.375rem;
+  height: 3.125rem;
+  border-radius: 10%;
+  color: white;
+  background-color: red;
+}
+.liste__saison__trailer {
+  width: 9.375rem;
+  height: 3.125rem;
+  border-radius: 10%;
+  color: red;
+  background-color: white;
+}
+.automn p {
+  color: white;
+}
+.automne img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+}
+.été img {
+  max-width: 50%;
+  height: 100%;
+}
