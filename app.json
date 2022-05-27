@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "vmi-visual-memory-improvement",
+    "slug": "snack-5fe75c1d-88b4-4357-8515-a59e29d2af76",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "description": "Description :\n\n (Visual Memory Improvement) a pour but d'améliorer votre mémoire visuelle\n\nLes cases vont se mettre à clignoter une ou plusieurs fois chacune , dans un ordre précis puis s'arrêter de clignoter.\n\n Le but est d'appuyer sur les cases dans le même ordre où elles ont clignoté pour gagner.\n\n Si vous manquez l'ordre en appuyant sur la mauvaise case , vous perdez .\n"
+  }
+}
