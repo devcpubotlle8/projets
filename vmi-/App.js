@@ -16,7 +16,7 @@ export default class App extends Component {
   
   };
 
-  _checkColor(color) {
+    colorVerif(color) {
     const { game, pressed, colorList } = this.state;
     if (!game) return;
     if (colorList[pressed] !== color) {
@@ -30,7 +30,7 @@ export default class App extends Component {
     }
   }
 
-  _NouvellePartie() {
+    nouvellePartie() {
     if (this.state.game) return;
     const theColors = ['brown', 'orange', 'blue' , 'pink', 'red', 'yellow','white'];
     const colorList = Array.from(
@@ -43,13 +43,13 @@ export default class App extends Component {
       animations.push(
         Animated.timing(this.state[color], {
           toValue: 0,
-          duration: 500,
+          duration: 470,
         })
       );
       animations.push(
         Animated.timing(this.state[color], {
           toValue: 1,
-          duration: 500,
+          duration: 470,
         })
       );
     });
@@ -63,7 +63,7 @@ export default class App extends Component {
 
 <Text style={{textAlign: 'center',color: 'white', margin:10, fontSize: 15 , backgroundColor: "grey",borderWidth: 5, padding: 12}}> VMI {"\n"} (Visual Memory Improvement) </Text>
 
-       <TouchableOpacity onPress={() => this._checkColor('brown')}>
+       <TouchableOpacity onPress={() => this.colorVerif('brown')}>
           <Animated.View
             style={[
               styles.box,
@@ -71,7 +71,7 @@ export default class App extends Component {
             ]}
           />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => this._checkColor('orange')}>
+        <TouchableOpacity onPress={() => this.colorVerif('orange')}>
           <Animated.View
             style={[
               styles.box,
@@ -79,7 +79,7 @@ export default class App extends Component {
             ]}
           />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => this._checkColor('blue')}>
+        <TouchableOpacity onPress={() => this.colorVerif('blue')}>
           <Animated.View
             style={[
               styles.box,
@@ -87,7 +87,7 @@ export default class App extends Component {
             ]}
           />
         </TouchableOpacity>
-         <TouchableOpacity onPress={() => this._checkColor('pink')}>
+         <TouchableOpacity onPress={() => this.colorVerif('pink')}>
           <Animated.View
             style={[
               styles.box,
@@ -95,7 +95,7 @@ export default class App extends Component {
             ]}
           />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => this._checkColor('red')}>
+        <TouchableOpacity onPress={() => this.colorVerif('red')}>
           <Animated.View
             style={[
               styles.box,
@@ -103,7 +103,7 @@ export default class App extends Component {
             ]}
           />
         </TouchableOpacity>
-         <TouchableOpacity onPress={() => this._checkColor('yellow')}>
+         <TouchableOpacity onPress={() => this.colorVerif('yellow')}>
           <Animated.View
             style={[
               styles.box,
@@ -111,7 +111,7 @@ export default class App extends Component {
             ]}
           />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => this._checkColor('white')}>
+        <TouchableOpacity onPress={() => this.colorVerif('white')}>
           <Animated.View
             style={[
               styles.box,
@@ -124,7 +124,7 @@ export default class App extends Component {
         d'apparition des couleurs et retranscrit les dans le bon ordre en appuyant sur celles-ci. </Text>
 
         <Button title="Nouvelle Partie" title="Nouvelle Partie"
-        color="#663399" onPress={() => this._NouvellePartie()} />
+        color="#663399" onPress={() => this.nouvellePartie()} />
       </View>
     );
   }
@@ -150,3 +150,5 @@ const styles = StyleSheet.create({
   },
 
 });
+
+//by MD
