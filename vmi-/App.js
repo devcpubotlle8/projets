@@ -34,7 +34,7 @@ export default class App extends Component {
     if (this.state.game) return;
     const theColors = ['brown', 'orange', 'blue' , 'pink', 'red', 'yellow','white'];
     const colorList = Array.from(
-      { length: 5 }, //augmenter/diminuer la taille pour augmenter/diminuer la difficulté
+      { length: 8 }, //augmenter/diminuer la taille pour augmenter/diminuer la difficulté
       () => theColors[Math.floor(Math.random() * theColors.length)]
     );
     this.setState({ game: true, colorList: colorList, pressed: 0 });
