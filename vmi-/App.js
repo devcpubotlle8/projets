@@ -43,13 +43,13 @@ export default class App extends Component {
       animations.push(
         Animated.timing(this.state[color], {
           toValue: 0,
-          duration: 320,
+          duration: 470,
         })
       );
       animations.push(
         Animated.timing(this.state[color], {
           toValue: 1,
-          duration: 320,
+          duration: 470,
         })
       );
     });
@@ -152,4 +152,4 @@ const styles = StyleSheet.create({
 });
 
 
-//made by maxime desruets
+//by MD
